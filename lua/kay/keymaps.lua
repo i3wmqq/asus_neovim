@@ -23,10 +23,6 @@ keymap("n", "<C-Right>", "<CMD>vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", "<CMD>bnext<CR>", opts)
 keymap("n", "<S-h>", "<CMD>bprevious<CR>", opts)
 
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
 -- Close tab
 keymap("n", "<leader>c", "<CMD>BufDel<CR>", opts)
 
