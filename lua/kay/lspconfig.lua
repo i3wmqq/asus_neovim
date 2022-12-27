@@ -30,20 +30,21 @@ for _, sign in ipairs(signs) do
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+local default_cmp_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+local clangd_capabilities = default_cmp_capabilities
+clangd_capabilities.offsetEncoding = "utf-8"
 
 local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
-
-	if client.name == bufnr then
-		client.server_capabilities.document_formatting = false
-	end
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+	vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, bufopts)
+	client.server_capabilities.document_formatting = false
 end
 
 lspconfig.sumneko_lua.setup({
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = default_cmp_capabilities,
 	settings = {
 		cmd = { "lua-language-server" },
 		filetypes = { "lua" },
@@ -60,15 +61,15 @@ lspconfig.sumneko_lua.setup({
 
 lspconfig.clangd.setup({
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = clangd_capabilities,
 })
 
 lspconfig.bashls.setup({
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = default_cmp_capabilities,
 })
 
 lspconfig.marksman.setup({
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = default_cmp_capabilities,
 })

@@ -3,17 +3,40 @@ if not cmp_status_ok then
 	return
 end
 
-local lspkind_status_ok, lspkind = pcall(require, "lspkind")
-if not lspkind_status_ok then
-	return
-end
-
 local luasnip_status_ok, luasnip = pcall(require, "luasnip")
 if not luasnip_status_ok then
 	return
 end
 
 require("luasnip.loaders.from_vscode").lazy_load()
+
+local kind_icons = {
+	Text = "",
+	Method = "m",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = "",
+}
 
 cmp.setup({
 	snippet = {
@@ -47,17 +70,22 @@ cmp.setup({
 		}),
 	}),
 	sources = cmp.config.sources({
-		{ name = "cmdline" },
 		{ name = "path" },
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "luasnip" },
 	}),
 	formatting = {
-		format = lspkind.cmp_format({
-			with_text = false,
-			maxwidth = 50,
-			mode = "symbol_text",
-		}),
+		fields = { "abbr", "kind", "menu" },
+		format = function(entry, vim_item)
+			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
+			vim_item.menu = ({
+				nvim_lsp = "[LSP]",
+				luasnip = "[Snippet]",
+				buffer = "[Buffer]",
+				path = "[Path]",
+			})[entry.source.name]
+			return vim_item
+		end,
 	},
 })

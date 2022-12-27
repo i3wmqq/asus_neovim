@@ -52,7 +52,6 @@ return packer.startup(function(use)
 
 	-- Auto complete
 	use({ "hrsh7th/nvim-cmp", commit = "a9c701fa7e12e9257b3162000e5288a75d280c28" })
-	use({ "hrsh7th/cmp-cmdline", commit = "23c51b2a3c00f6abc4e922dbd7c3b9aca6992063" })
 	use({ "hrsh7th/cmp-path", commit = "91ff86cd9c29299a64f968ebb45846c485725f23" })
 	use({ "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" })
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "59224771f91b86d1de12570b4070fe4ad7cd1eeb" })
@@ -94,6 +93,8 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", commit = "e960efa60e97df58e089b00270f09d60f27202c8" })
 	-- Comment
 	use({ "numToStr/Comment.nvim", commit = "45dc21a71ad1450606f5e98261badb28db59d74c" })
+	-- Speedup startup time
+	use({ "lewis6991/impatient.nvim", commit = "9f7eed8133d62457f7ad2ca250eb9b837a4adeb7" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
