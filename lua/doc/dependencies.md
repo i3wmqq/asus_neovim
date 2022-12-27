@@ -1,0 +1,13 @@
+- node
+- npm
+- rust
+- cargo
+- python
+- pip
+- rg
+- xclip
+- gzip
+- tar
+- unzip
+- wget
+- curl
