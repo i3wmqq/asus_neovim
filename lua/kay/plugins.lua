@@ -100,6 +100,8 @@ return packer.startup(function(use)
 	use({ "lewis6991/impatient.nvim", commit = "9f7eed8133d62457f7ad2ca250eb9b837a4adeb7" })
 	-- Keymaps
 	use({ "folke/which-key.nvim", commit = "8682d3003595017cd8ffb4c860a07576647cc6f8" })
+	-- Spectre
+	use({ "windwp/nvim-spectre", commit = "68ea562b485b6593e325e7916c3bd6e833d433e7" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

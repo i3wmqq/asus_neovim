@@ -25,4 +25,4 @@ set.pumheight = 10
 set.fileencoding = "utf-8"
 set.numberwidth = 4
 set.completeopt = { "menu", "menuone", "noselect" }
-set.mouse = "i"
+set.mouse = "a"

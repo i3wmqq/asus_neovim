@@ -3,6 +3,7 @@
 - rust
 - cargo
 - python
+- sed
 - pip
 - rg
 - xclip

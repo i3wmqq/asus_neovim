@@ -30,6 +30,7 @@ local opts = {
 
 local mappings = {
 	["e"] = { "<CMD>NvimTreeToggle<cr>", "File Explorer" },
+	["r"] = { "<CMD>lua require('spectre').open_file_search()<CR>", "Spectre" },
 	["w"] = { "<CMD>w!<CR>", "Save File" },
 	["q"] = { "<CMD>qa<CR>", "Quit IDE" },
 	["s"] = { "<CMD>lua vim.lsp.buf.format()<CR><CMD>w<CR>", "Save & Format" },
