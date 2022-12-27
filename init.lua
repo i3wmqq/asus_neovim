@@ -20,7 +20,7 @@ require("kay/mason")
 require("kay/lspkinds")
 require("kay/gitsigns")
 require("kay/cmp")
-require("kay/nullls")
+require("kay/null_ls")
 
 require("kay/alpha")
 require("kay/colorizer")

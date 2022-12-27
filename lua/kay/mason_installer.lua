@@ -5,12 +5,14 @@ end
 
 mason_installer.setup({
 	ensure_installed = {
-		"stylua",
 		"lua-language-server",
-		"shfmt",
-		"bash-language-server",
+		"stylua",
 		"clangd",
 		"clang-format",
+		"bash-language-server",
+		"shfmt",
+		"marksman",
+		"prettierd",
 	},
 	auto_update = true,
 	run_on_start = true,

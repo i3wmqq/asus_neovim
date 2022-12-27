@@ -41,23 +41,34 @@ local on_attach = function(client, bufnr)
 	end
 end
 
-local servers = { "clangd", "bashls" }
-
-for _, server in pairs(servers) do
-	lspconfig[server].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
-end
-
 lspconfig.sumneko_lua.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
+		cmd = { "lua-language-server" },
+		filetypes = { "lua" },
 		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
 			diagnostics = {
 				globals = { "vim" },
 			},
 		},
 	},
+})
+
+lspconfig.clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.bashls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.marksman.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
