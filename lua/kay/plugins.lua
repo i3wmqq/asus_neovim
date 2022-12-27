@@ -92,6 +92,8 @@ return packer.startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "e960efa60e97df58e089b00270f09d60f27202c8" })
 	use({ "nvim-telescope/telescope-media-files.nvim", commit = "513e4ee385edd72bf0b35a217b7e39f84b6fe93c" })
+	use({ "chip/telescope-software-licenses.nvim", commit = "98c1986aaa206809a8ab7013b4d099a840600bf1" })
+	use({ "xiyaowong/telescope-emoji.nvim", commit = "86248d97be84a1ce83f0541500ef9edc99ea2aa1" })
 	-- Comment
 	use({ "numToStr/Comment.nvim", commit = "45dc21a71ad1450606f5e98261badb28db59d74c" })
 	-- Speedup startup time

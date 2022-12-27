@@ -3,7 +3,9 @@ if not telescope_status_ok then
 	return
 end
 
-require("telescope").load_extension("media_files")
+telescope.load_extension("media_files")
+telescope.load_extension("software-licenses")
+telescope.load_extension("emoji")
 
 telescope.setup({
 	extensions = {

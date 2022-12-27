@@ -17,7 +17,6 @@ set.smartindent = true
 set.wrap = false
 set.smartcase = true
 set.showmode = false
-set.mouse = "a"
 set.conceallevel = 0
 set.cmdheight = 1
 set.clipboard = "unnamedplus"
