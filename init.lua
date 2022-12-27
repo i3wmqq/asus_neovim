@@ -20,4 +20,8 @@ require("kay.alpha")
 require("kay.colorizer")
 require("kay.impatient_profile")
 require("kay.wk")
-require("impatient")
+
+local impatient_status_ok, impatient = pcall(require, "impatient")
+if not impatient_status_ok then
+	return
+end
