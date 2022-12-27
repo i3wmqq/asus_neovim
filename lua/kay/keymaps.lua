@@ -22,22 +22,3 @@ keymap("n", "<C-Right>", "<CMD>vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", "<CMD>bnext<CR>", opts)
 keymap("n", "<S-h>", "<CMD>bprevious<CR>", opts)
-
--- Close tab
-keymap("n", "<leader>c", "<CMD>BufDel<CR>", opts)
-
--- Explorer
-keymap("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", opts)
-
--- Save format
-keymap("n", "<leader>s", "<CMD>lua vim.lsp.buf.format()<CR><CMD>w<CR>", opts)
-
--- Quit
-keymap("n", "<leader>q", "<CMD>qa<CR>", opts)
-
--- Telescope
-keymap("n", "<leader>f", "<CMD>Telescope find_files hidden=true<CR>", opts)
-keymap("n", "<leader>g", "<CMD>Telescope live_grep<CR>", opts)
-
--- Lsp
-keymap("n", "<leader>l", "<CMD>lua vim.diagnostic.open_float(nil, {focus=false})<CR>", opts)

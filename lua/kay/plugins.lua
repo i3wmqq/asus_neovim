@@ -91,10 +91,13 @@ return packer.startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", commit = "fffbcb829288c3ca366f17cdb8d46aefb5c1d6f3" })
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "e960efa60e97df58e089b00270f09d60f27202c8" })
+	use({ "nvim-telescope/telescope-media-files.nvim", commit = "513e4ee385edd72bf0b35a217b7e39f84b6fe93c" })
 	-- Comment
 	use({ "numToStr/Comment.nvim", commit = "45dc21a71ad1450606f5e98261badb28db59d74c" })
 	-- Speedup startup time
 	use({ "lewis6991/impatient.nvim", commit = "9f7eed8133d62457f7ad2ca250eb9b837a4adeb7" })
+	-- Keymaps
+	use({ "folke/which-key.nvim", commit = "8682d3003595017cd8ffb4c860a07576647cc6f8" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -11,3 +11,4 @@
 - unzip
 - wget
 - curl
+- fd
