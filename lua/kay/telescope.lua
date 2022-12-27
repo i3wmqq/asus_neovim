@@ -10,7 +10,7 @@ telescope.load_extension("emoji")
 telescope.setup({
 	extensions = {
 		media_files = {
-			filetypes = { "png", "webp", "jpg", "jpeg", "mp4" },
+			filetypes = { "png", "webp", "jpg", "jpeg" },
 			find_cmd = "fd",
 		},
 	},
