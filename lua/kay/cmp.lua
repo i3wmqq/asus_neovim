@@ -45,7 +45,7 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<S-j>"] = cmp.mapping(function(fallback)
+		["<Tab>"] = cmp.mapping(function(fallback)
 			local col = vim.fn.col(".") - 1
 
 			if cmp.visible() then
@@ -56,7 +56,7 @@ cmp.setup({
 				cmp.complete()
 			end
 		end, { "i", "s" }),
-		["<S-k>"] = cmp.mapping(function(fallback)
+		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
 			else
@@ -69,6 +69,7 @@ cmp.setup({
 			select = false,
 		}),
 	}),
+
 	sources = cmp.config.sources({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
