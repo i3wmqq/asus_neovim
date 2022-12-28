@@ -49,8 +49,6 @@ local mappings = {
 		f = { "<CMD>lua vim.lsp.buf.definition()<CR>", "Definition" },
 		g = { "<CMD>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
 		h = { "<CMD>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
-		j = { "<CMD>lua vim.diagnostic.goto_next()<CR>", "Next" },
-		k = { "<CMD>lua vim.diagnostic.goto_prev()<CR>", "Previous" },
 		l = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
 	},
 	j = {
