@@ -4,6 +4,7 @@ set.cursorline = true
 set.number = true
 set.autoindent = true
 set.relativenumber = true
+set.undofile = true
 set.signcolumn = "yes"
 set.expandtab = true
 set.shiftwidth = 2
