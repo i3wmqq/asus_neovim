@@ -38,7 +38,26 @@ local kind_icons = {
 	TypeParameter = "",
 }
 
+local border = {
+	{ "╭", "CmpBorder" },
+	{ "─", "CmpBorder" },
+	{ "╮", "CmpBorder" },
+	{ "│", "CmpBorder" },
+	{ "╯", "CmpBorder" },
+	{ "─", "CmpBorder" },
+	{ "╰", "CmpBorder" },
+	{ "│", "CmpBorder" },
+}
+
 cmp.setup({
+	window = {
+		documentation = {
+			border = border,
+		},
+		completion = {
+			border = border,
+		},
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -82,9 +101,9 @@ cmp.setup({
 			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.menu = ({
 				nvim_lsp = "[LSP]",
-				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
+				luasnip = "[SNIP]",
+				buffer = "[BUF]",
+				path = "[PATH]",
 			})[entry.source.name]
 			return vim_item
 		end,
