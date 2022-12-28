@@ -22,7 +22,7 @@ bufferline.setup({
 		show_buffer_close_icons = false,
 		show_close_icon = false,
 		show_tab_indicators = false,
-		separator_style = { "", "" },
+		separator_style = { "⏽", "⏽" },
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 	},
